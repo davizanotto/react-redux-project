@@ -9,22 +9,24 @@ import {
   decrementAsync
 } from '../../modules/counter'
 
+import { Button } from 'antd'
+
 const Home = props => (
   <div>
     <h1>Home</h1>
     <p>Count: {props.count}</p>
 
     <p>
-      <button onClick={props.increment} disabled={props.isIncrementing}>Increment</button>
-      <button onClick={props.incrementAsync} disabled={props.isIncrementing}>Increment Async</button>
+      <Button onClick={props.increment} disabled={props.isIncrementing}>Increment</Button>
+      <Button onClick={props.incrementAsync} disabled={props.isIncrementing}>Increment Async</Button>
     </p>
 
     <p>
-      <button onClick={props.decrement} disabled={props.isDecrementing}>Decrementing</button>
-      <button onClick={props.decrementAsync} disabled={props.isDecrementing}>Decrement Async</button>
+      <Button onClick={props.decrement} disabled={props.isDecrementing}>Decrementing</Button>
+      <Button onClick={props.decrementAsync} disabled={props.isDecrementing}>Decrement Async</Button>
     </p>
 
-    <p><button onClick={() => props.changePage()}>Go to about page via redux</button></p>
+    <p><Button onClick={() => props.changePage()}>Go to about page via redux</Button></p>
   </div>
 )
 
